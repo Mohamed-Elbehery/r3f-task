@@ -9,7 +9,7 @@ export const PointContextProvider = ({
 }) => {
   const [activePoint, setActivePoint] = useState({});
   const [toggleInfo, setToggleInfo] = useState(false);
-  const [activeMap, setActiveMap] = useState(0);
+  const [activeMap, setActiveMap] = useState(1);
 
   return (
     <PointContext.Provider

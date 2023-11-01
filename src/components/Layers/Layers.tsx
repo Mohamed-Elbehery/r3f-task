@@ -19,7 +19,11 @@ const Layers = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.5, bounce: 0.35, type: "spring" }}
         >
-          <Canvas className={`layer`} shadows>
+          <Canvas
+            camera={{ position: [0, -4, 9], fov: 40 }}
+            className={`layer`}
+            shadows
+          >
             <Suspense fallback={<Loader />}>
               <OrbitControls
                 minPolarAngle={Math.PI / 8}

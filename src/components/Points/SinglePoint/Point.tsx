@@ -12,17 +12,19 @@ const PointSvg: React.FC<Props> = (props) => {
   const { setActivePoint, setToggleInfo } = usePointContext();
 
   return (
-    <Svg
-      key={props.data?.id}
-      onClick={() => {
-        setActivePoint(props.data);
-        setToggleInfo(true);
-      }}
-      position={props.data.position}
-      rotation={[0.7, 0, 0]}
-      src={mapPin}
-      scale={0.02}
-    />
+    <>
+      <Svg
+        key={props.data?.id}
+        onClick={() => {
+          setActivePoint(props.data);
+          setToggleInfo(true);
+        }}
+        position={props.data.position}
+        rotation={[0.7, 0, 0]}
+        src={mapPin}
+        scale={0.02}
+      />
+    </>
   );
 };
 
