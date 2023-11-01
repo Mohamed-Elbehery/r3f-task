@@ -7,4 +7,5 @@ export { default as SearchKeys } from './SearchKeys/SearchKeys';
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as Utils } from './Utils/Utils';
 export { default as Layers } from './Layers/Layers';
+export { default as Loader } from './Loader';
 export { default as Point } from './Points/SinglePoint/Point';

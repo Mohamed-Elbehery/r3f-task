@@ -15,30 +15,30 @@ const SearchKeys = ({ query }: { query: string }) => {
         <>
           {floors.map((floor) => (
             <div key={floor?.id}>
-              {floor.points.map((point, index) => {
-                if (
-                  point.title?.toLowerCase().startsWith(query.toLowerCase()) &&
-                  (point.key === key.title || point?.formattedKey === key.title)
-                ) {
-                  return (
-                    <p key={index} onClick={() => setActiveMap(() => floor.id)}>
-                      <span
-                        onClick={() => {
-                          setActivePoint(() => point);
-                          setToggleInfo(true);
-                        }}
-                      >
-                        {point.title}
-                      </span>{" "}
-                      <span>
-                        L{floor.id} / {point?.office}
-                      </span>
-                    </p>
-                  );
-                } else {
-                  return "";
-                }
-              })}
+              {floor.points
+                .filter(
+                  (point) =>
+                    point.title
+                      ?.toLowerCase()
+                      .startsWith(query.toLowerCase()) &&
+                    (point.key === key.title ||
+                      point?.formattedKey === key.title)
+                )
+                .map((point, index) => (
+                  <p key={index} onClick={() => setActiveMap(() => floor.id)}>
+                    <span
+                      onClick={() => {
+                        setActivePoint(() => point);
+                        setToggleInfo(true);
+                      }}
+                    >
+                      {point.title}
+                    </span>{" "}
+                    <span>
+                      L{floor.id} / {point?.office}
+                    </span>
+                  </p>
+                ))}
             </div>
           ))}
         </>
