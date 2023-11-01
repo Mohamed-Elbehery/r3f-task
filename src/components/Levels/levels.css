@@ -24,3 +24,8 @@
 .levels button:hover {
   background-color: #8f8f8f;
 }
+
+.levels button.active-level {
+  background-color: #6e6e6e;
+  box-shadow: inset 0 0 10px #000;
+}

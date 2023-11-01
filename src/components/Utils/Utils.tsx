@@ -13,7 +13,7 @@ const Utils = () => {
           <button
             onClick={() => setActiveMap(() => activeMap + 1)}
             className="up-level"
-            disabled={activeMap == 6}
+            disabled={activeMap == 7}
           >
             <UpChevronIcon />
           </button>
@@ -21,7 +21,7 @@ const Utils = () => {
           {/* Layers */}
           <button
             onClick={() => {
-              setActiveMap(0);
+              setActiveMap(1);
               setToggleInfo(false);
             }}
           >
@@ -32,7 +32,7 @@ const Utils = () => {
           <button
             onClick={() => setActiveMap(() => activeMap - 1)}
             className="down-level"
-            disabled={activeMap == 0}
+            disabled={activeMap == 1}
           >
             <DownChevronIcon />
           </button>

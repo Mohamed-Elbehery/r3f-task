@@ -6,7 +6,7 @@ import { OrbitControls } from "@react-three/drei";
 import { motion } from "framer-motion";
 
 const Layers = () => {
-  const layers = ["0", "1", "2", "3", "4", "5", "6"];
+  const layers = ["1", "2", "3", "4", "5", "6", "7"];
   const { activeMap } = usePointContext();
 
   console.log(activeMap);
@@ -16,9 +16,9 @@ const Layers = () => {
       return (
         <motion.div
           key={layer}
-          initial={{ y: "50%" }}
-          whileInView={{ y: "0" }}
-          transition={{ duration: 1.25, bounce: 0.25, type: "spring" }}
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5, bounce: 0.3, type: "spring" }}
         >
           <Canvas className={`layer`} shadows>
             <OrbitControls />

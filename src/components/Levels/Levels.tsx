@@ -2,8 +2,8 @@ import { usePointContext } from "../../contexts/pointContext";
 import "./levels.css";
 
 const Levels = () => {
-  const levels = ["0", "1", "2", "3", "4", "5", "6"];
-  const { setActiveMap } = usePointContext();
+  const levels = ["1", "2", "3", "4", "5", "6", "7"];
+  const { activeMap, setActiveMap } = usePointContext();
 
   return (
     <div className="levels">
@@ -11,10 +11,11 @@ const Levels = () => {
         <button
           key={lvl + 1}
           onClick={() => {
-            setActiveMap(+lvl + 1);
+            setActiveMap(+lvl);
           }}
+          className={`${activeMap == lvl ? "active-level" : ""}`}
         >
-          {+lvl == 0 ? "G" : lvl}
+          {+lvl == 1 ? "G" : lvl}
         </button>
       ))}
     </div>
