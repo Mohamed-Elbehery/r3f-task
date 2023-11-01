@@ -1,0 +1,10 @@
+ul.keys {
+  position: absolute;
+  bottom: 2rem;
+  left: 2.25rem;
+}
+
+ul.keys li:has(h2) {
+  margin-left: -0.75rem;
+  margin-bottom: 1.5rem;
+}

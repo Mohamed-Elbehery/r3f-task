@@ -1,0 +1,91 @@
+.info {
+  position: fixed;
+  top: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 530px;
+  background-color: #d7d7dc;
+  padding: 3rem 0;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.info.info-visible {
+  transform: translateY(-50vh);
+}
+
+.info svg {
+  position: absolute;
+  color: white;
+  right: 360px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #c4c4c7;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: content-box;
+  padding: 1rem;
+}
+
+.info svg:hover {
+  color: black;
+}
+
+/* Sidebar width is 350px so we will remove 175px so we center the content */
+.info .content {
+  position: absolute;
+  left: calc(50% - 175px);
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.info h4 {
+  color: #515158;
+  margin-top: 1.5rem;
+}
+
+.info .content p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: #515158;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+
+.info .content p span {
+  font-weight: normal;
+}
+
+.info .content .person-info {
+  display: flex;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
+.info .content p.description {
+  font-weight: normal;
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+  .info-search-icon {
+    display: none;
+  }
+
+  .info .content {
+    left: 50%;
+    width: 600px;
+  }
+
+  .info .content p.description {
+    width: 100%;
+  }
+}

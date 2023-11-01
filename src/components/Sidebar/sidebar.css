@@ -1,0 +1,86 @@
+aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+aside svg {
+  cursor: pointer;
+  background-color: #a7a7a7;
+  padding: 1rem;
+  width: 62px;
+  height: 66px;
+}
+
+aside svg:hover g {
+  fill: black;
+  transition: 0.15s;
+}
+
+/*TODO Search Icon */
+aside .search {
+  position: absolute;
+  top: 0;
+  transition: 0.5s;
+  background-color: white;
+  width: 350px;
+  right: 0;
+  translate: 350px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+aside .search-visible {
+  translate: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  aside .search {
+    translate: 0;
+  }
+}
+
+aside .search li {
+  padding-left: 1.75rem;
+}
+
+aside .search li:first-child {
+  display: flex;
+  justify-content: space-between;
+  height: 66px;
+  padding-left: 0;
+  margin-bottom: 1.75rem;
+}
+
+aside .search li:first-child input {
+  flex: 1;
+  background-color: #333;
+  border: none;
+  outline: none;
+  padding: 0 1rem 0 1.75rem;
+  caret-color: white;
+  color: white;
+}
+
+aside .search li:first-child input::placeholder {
+  color: gray;
+  transition: 0.35s;
+}
+
+aside .search li:first-child input:focus::placeholder {
+  opacity: 0;
+}
+
+/*TODO XMark Icon */
+aside .search li:first-child svg {
+  background-color: #222;
+  color: white;
+  height: 100%;
+  padding: 1rem;
+}
+
+aside .search li:first-child svg:hover {
+  background-color: #111;
+  transition: 0.3s;
+}

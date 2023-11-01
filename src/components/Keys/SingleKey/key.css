@@ -1,0 +1,13 @@
+ul.keys li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.key-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: block;
+}
