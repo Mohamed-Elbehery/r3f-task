@@ -27,3 +27,8 @@ export type IconProps = {
   handleClick: (status: boolean) => void;
   classValue?: string;
 };
+
+export type Search = {
+  query: string;
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
+}

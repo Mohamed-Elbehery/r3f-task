@@ -1,9 +1,11 @@
+import React from "react";
 import { floors, keys } from "../../constants";
 import { usePointContext } from "../../contexts/pointContext";
+import { Search } from "../../types";
 
 import "./searchKeys.css";
 
-const SearchKeys = ({ query }: { query: string }) => {
+const SearchKeys: React.FC<Search> = ({ query, setQuery }) => {
   const { setActivePoint, setToggleInfo, setActiveMap, activeMap } =
     usePointContext();
 
@@ -30,6 +32,7 @@ const SearchKeys = ({ query }: { query: string }) => {
                       onClick={() => {
                         setActivePoint(() => point);
                         setToggleInfo(true);
+                        setQuery("");
                       }}
                     >
                       {point.title}
@@ -57,6 +60,7 @@ const SearchKeys = ({ query }: { query: string }) => {
                         onClick={() => {
                           setActivePoint(() => point);
                           setToggleInfo(true);
+                          setQuery("");
                         }}
                       >
                         {point.title}
@@ -86,6 +90,7 @@ const SearchKeys = ({ query }: { query: string }) => {
                         onClick={() => {
                           setActivePoint(() => point);
                           setToggleInfo(true);
+                          setQuery("");
                         }}
                       >
                         {point.title}

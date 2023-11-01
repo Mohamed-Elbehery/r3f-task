@@ -24,7 +24,7 @@ const Sidebar = () => {
           />
           <XMark classValue={"x-icon"} handleClick={handleClick} />
         </li>
-        <SearchKeys query={query} />
+        <SearchKeys setQuery={setQuery} query={query} />
       </ul>
     </aside>
   );
