@@ -12,7 +12,7 @@ const Layers = () => {
   console.log(activeMap);
 
   return layers.map((layer) => {
-    if (+activeMap == +layer) {
+    if (+activeMap + 1 == +layer) {
       return (
         <motion.div
           key={layer}
