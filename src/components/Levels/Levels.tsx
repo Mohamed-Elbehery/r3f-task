@@ -5,7 +5,6 @@ import "./levels.css";
 const Levels = () => {
   const levels = ["0", "1", "2", "3", "4", "5", "6"];
   const { activeMap, setActiveMap } = usePointContext();
-  const lowHeightScreens = screen.height <= 1000 ? 95 : 0;
 
   const compareLevel = (lvl: number) => {
     return activeMap - 1 == lvl;
