@@ -22,7 +22,7 @@ const Layers: FC = () => {
           <Canvas
             camera={{
               position: [0, -4, 9],
-              fov: 40,
+              fov: 50,
             }}
             className={`layer`}
             shadows
